@@ -21,7 +21,7 @@ class RolsUsuaris extends Migration
             $table->timestamps();
 
             // Relationships
-            $table->foreign('id_usuari')->references('id')->on('usuaris');
+            $table->foreign('id_usuari')->references('id')->on('users');
             $table->foreign('id_rol')->references('id')->on('rols');
         });
     }

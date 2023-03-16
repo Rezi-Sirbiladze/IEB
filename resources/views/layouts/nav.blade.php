@@ -51,9 +51,8 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerIeb">
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link"
-                        {{ Route::currentRouteNamed('Ieb/crear_practicas_formulario') ? 'style=color:#3b71ca;' : '' }}
-                        href="">Fira
+                    <a class="nav-link" {{ Route::currentRouteNamed('/') ? 'style=color:#3b71ca;' : '' }}
+                        href="{{ route('/') }}">Fira
                     </a>
                 </li>
 
@@ -77,10 +76,31 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link"
-                        {{ Route::currentRouteNamed('Ieb/lista_practicas_reservadas') ? 'style=color:#3b71ca;' : '' }}
-                        href="">Lista de reservas
-                    </a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="https://placekitten.com/120/120" class="rounded-circle" height="40"
+                                alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            @if (Route::has('login'))
+                                @auth
+                                    <li>
+                                        <a class="dropdown-item"
+                                            {{ Route::currentRouteNamed('/home') ? 'style=color:#3b71ca;' : '' }}
+                                            href="{{ url('/home') }}">Home</a>
+                                    </li>
+                                @else
+                                    <li>
+                                        <a class="dropdown-item"
+                                            {{ Route::currentRouteNamed('login') ? 'style=color:#3b71ca;' : '' }}
+                                            href="{{ route('login') }}">Login</a>
+                                    </li>
+                                @endauth
+                            @endif
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>

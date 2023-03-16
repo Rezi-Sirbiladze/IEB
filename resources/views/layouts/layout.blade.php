@@ -63,7 +63,7 @@
     </script>
 
 
-    <footer>
+    <footer class="mt-4">
         <div class="social-links">
             <div id="twitter" class="social-btn flex-center">
                 <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">

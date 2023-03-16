@@ -17,6 +17,7 @@ class ActivitatsFiras extends Migration
             $table->increments('id')->unsigned();
             $table->integer('id_fira')->unsigned();
             $table->integer('id_activitat')->unsigned();
+            $table->integer('places')->unsigned();
             $table->softDeletes();
             $table->timestamps();
 

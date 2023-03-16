@@ -14,7 +14,7 @@ class Reservas extends Migration
     public function up()
     {
         Schema::create('reservas', function (Blueprint $table) {
-            $table->bigIncrements('id')->unsigned();
+            $table->increments('id')->unsigned();
             $table->integer('id_activitat_fira')->unsigned();
             $table->integer('id_usuari')->unsigned();
             $table->integer('presentat');
@@ -25,7 +25,7 @@ class Reservas extends Migration
 
             // Relationships
             $table->foreign('id_activitat_fira')->references('id')->on('activitats_firas');
-            $table->foreign('id_usuari')->references('id')->on('usuaris');
+            $table->foreign('id_usuari')->references('id')->on('users');
         });
     }
 

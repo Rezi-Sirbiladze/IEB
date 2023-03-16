@@ -11,6 +11,6 @@ class Rol extends Model
 
     public function usuari()
     {
-        return $this->belongsToMany('App\Models\Usuari');
+        return $this->belongsToMany('App\User');
     }
 }
