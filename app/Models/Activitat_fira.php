@@ -15,7 +15,7 @@ class Activitat_fira extends Model
 
     public function activitat()
     {
-        return $this->belongsToMany('App\Models\Activitat', 'id', 'id_activitat');
+        return $this->hasOne('App\Models\Activitat', 'id', 'id_activitat');
     }
 
     public function reserva()

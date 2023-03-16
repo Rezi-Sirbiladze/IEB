@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('/');
-
+Route::get('/', 'FiraController@index')->name('/');
 
 Route::get('login', 'HomeController@index')->name('home');
 

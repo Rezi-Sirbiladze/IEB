@@ -58,24 +58,17 @@
 
                 <li class="nav-item">
                     <a class="nav-link" {{ Route::currentRouteNamed('Ieb/vehiculos') ? 'style=color:#3b71ca;' : '' }}
-                        href="">Vehículos
+                        href="">Contacte
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" {{ Route::currentRouteNamed('Ieb/profesores') ? 'style=color:#3b71ca;' : '' }}
-                        href="">Profesores
+                        href="">Informació
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                        {{ Route::currentRouteNamed('Ieb/horario_practicas') ? 'style=color:#3b71ca;' : '' }}
-                        href="">Horario de prácticas
-                    </a>
-                </li>
-
-                <li class="nav-item">
+                <li class="nav-item mx-4">
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
