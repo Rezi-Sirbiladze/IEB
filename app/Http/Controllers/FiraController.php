@@ -12,4 +12,9 @@ class FiraController extends Controller
         $activitats_fira = Activitat_fira::All();
         return view('index', compact('activitats_fira'));
     }
+
+    public function reservar(Request $request)
+    {
+        return $request;
+    }
 }

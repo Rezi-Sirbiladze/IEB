@@ -4,12 +4,16 @@
   font-family: Nunito, sans-serif;
 }
 
+/* Slide */
 .splide__slide img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
+/** Slide */
+
+/* RRSS */
 .social-links,
 .flex-center {
   display: flex;
@@ -65,3 +69,84 @@
 #github {
   fill: #333;
 }
+
+/** RRSS */
+
+/* Card */
+.card {
+  text-align: center;
+}
+
+/** Card */
+
+
+
+/* checkbox */
+.divcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.divcheckboxSelect,
+.divcheckboxNoSelect {
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.divcheckboxSelect p,
+.divcheckboxNoSelect p {
+  margin-bottom: 0px;
+}
+
+.divcheckboxNoSelect {
+  background: #e0e0e0;
+}
+
+.divcheckboxSelect {
+  background: aqua;
+}
+
+.divcheckboxSelect {
+  background: aqua;
+}
+
+/** checkbox */
+
+
+/* Panel  */
+#hiddenPanel {
+  z-index: 1;
+  position: fixed;
+  top: 100px;
+  right: -200px;
+  width: 200px;
+  background-color: grey;
+  height: 250px;
+}
+
+#close-bar {
+  z-index: 1;
+  position: absolute;
+  left: -65px;
+  background-color: white;
+  border-radius: 10em;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+}
+
+#close-bar:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+
+#close-bar:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+/** Panel */

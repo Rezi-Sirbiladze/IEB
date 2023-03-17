@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'FiraController@index')->name('/');
+Route::post('reservar', 'FiraController@reservar')->name('reservar');
 
 Route::get('login', 'HomeController@index')->name('home');
 
