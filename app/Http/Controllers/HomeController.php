@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Reserva;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $reservas = Reserva::where('id_usuari', Auth::id())
+            ->join('activitats_firas', 'reservas.id_activitat_fira', '=', 'activitats_firas.id')
+            ->orderBy('activitats_firas.hora_inici')
+            ->select('reservas.*')
+            ->get();
+
+        return view('home', compact('reservas'));
     }
 }

@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function reseva()
     {
-        return $this->hasMany('App\Models\Reservas', 'id_usuari', 'id');
+        return $this->hasMany('App\Models\Reserva', 'id_usuari', 'id');
     }
 }

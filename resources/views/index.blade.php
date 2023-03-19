@@ -124,10 +124,35 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="errorModalContent" class="modal-body">...</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Tancar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // btn_reservar
         let btn_reservar = document.getElementById("btn_reservar");
         btn_reservar.addEventListener('click', function() {
+            if (activitat_fira_id.length < 4) {
+                const errorModal = document.getElementById('errorModal');
+                const modal = new mdb.Modal(errorModal);
+                const errorModalContent = document.getElementById('errorModalContent');
+                errorModalContent.innerHTML =
+                    'És obligatori apuntar-se en 4 activitats + Actividad conjuta obligatori.';
+                modal.show()
+                return null;
+            }
             var parametros = {
                 "_token": "{{ csrf_token() }}",
                 "activitat_fira_id": activitat_fira_id,
@@ -137,7 +162,21 @@
                 url: '{{ url(route('reservar')) }}',
                 type: 'POST',
                 success: function(response) {
-                    console.log(response)
+                    console.log(response);
+                    if (typeof response == 'object') {
+                        const errorModal = document.getElementById('errorModal');
+                        const modal = new mdb.Modal(errorModal);
+                        const errorModalContent = document.getElementById('errorModalContent');
+                        let mensaje = 'Activitats sense places:';
+                        response.forEach(element => {
+                            mensaje = mensaje + '<br>' + element;
+                        });
+                        errorModalContent.innerHTML = mensaje;
+                        modal.show()
+                    } else {
+                        window.location.href = response;
+                    }
+
                 }
             });
         });

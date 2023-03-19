@@ -41,9 +41,9 @@
     <section class="splide" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide"><img src="https://placekitten.com/1000/500" alt=""></li>
-                <li class="splide__slide"><img src="https://placekitten.com/1000/500" alt=""></li>
-                <li class="splide__slide"><img src="https://placekitten.com/1000/500" alt=""></li>
+                <li class="splide__slide"><img src="https://placedog.net/1000/500" alt=""></li>
+                <li class="splide__slide"><img src="https://placedog.net/1000/500" alt=""></li>
+                <li class="splide__slide"><img src="https://placedog.net/1000/500" alt=""></li>
             </ul>
         </div>
     </section>

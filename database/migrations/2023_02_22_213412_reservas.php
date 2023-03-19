@@ -17,9 +17,9 @@ class Reservas extends Migration
             $table->increments('id')->unsigned();
             $table->integer('id_activitat_fira')->unsigned();
             $table->integer('id_usuari')->unsigned();
-            $table->integer('presentat');
-            $table->integer('valoracio');
-            $table->string('comentari');
+            $table->integer('presentat')->nullable();
+            $table->integer('valoracio')->nullable();
+            $table->string('comentari')->nullable();
             $table->softDeletes();
             $table->timestamps();
 

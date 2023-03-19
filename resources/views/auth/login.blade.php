@@ -180,7 +180,7 @@
         <div class="col">
             <form class="form_container p-4 mt-4 mx-auto" action="{{ route('login') }}" method="POST">
                 @csrf
-                <div class="logo_container"><img src="https://placekitten.com/120/120"></div>
+                <div class="logo_container"><img src="https://placedog.net/120/120"></div>
                 <div class="title_container">
                     <p class="title">Inicieu sessió al vostre compte</p>
                 </div>
@@ -205,7 +205,7 @@
         <div class="col">
             <form class="form_container p-4 mt-4 mx-auto" action="{{ route('register') }}" method="POST">
                 @csrf
-                <div class="logo_container"><img src="https://placekitten.com/120/120"></div>
+                <div class="logo_container"><img src="https://placedog.net/120/120"></div>
                 <div class="title_container">
                     <p class="title">Crear nou compte</p>
                 </div>

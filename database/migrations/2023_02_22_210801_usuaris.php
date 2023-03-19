@@ -17,7 +17,7 @@ class Usuaris extends Migration
             $table->increments('id')->unsigned();
             $table->string('nom');
             $table->string('cognoms');
-            $table->string('mobil');
+            $table->string('mobil')->nullable();
             $table->string('correu')->unique();
             $table->timestamp('correu_confirmat')->nullable();
             $table->softDeletes();

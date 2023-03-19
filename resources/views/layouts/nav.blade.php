@@ -73,7 +73,8 @@
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
                             aria-expanded="false">
-                            <img src="https://placekitten.com/120/120" class="rounded-circle" height="40"
+                            <img @if (Auth::check()) src="https://placedog.net/120/120" @else src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg" @endif
+                                class="rounded-circle" height="40" width="40"
                                 alt="Black and White Portrait of a Man" loading="lazy" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -82,7 +83,17 @@
                                     <li>
                                         <a class="dropdown-item"
                                             {{ Route::currentRouteNamed('/home') ? 'style=color:#3b71ca;' : '' }}
-                                            href="{{ url('/home') }}">Home</a>
+                                            href="{{ url('/home') }}">Home
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
                                     </li>
                                 @else
                                     <li>

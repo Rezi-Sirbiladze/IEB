@@ -20,6 +20,6 @@ class Activitat_fira extends Model
 
     public function reserva()
     {
-        return $this->hasMany('App\Models\Reservas', 'id_activitat_fira', 'id');
+        return $this->hasMany('App\Models\Reserva', 'id_activitat_fira', 'id');
     }
 }

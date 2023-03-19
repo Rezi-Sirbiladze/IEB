@@ -15,6 +15,16 @@ activitats.forEach(function (elem) {
                 elem.parentNode.classList.remove('divcheckboxNoSelect');
                 elem.parentNode.classList.add('divcheckboxSelect');
             } else {
+                const errorModal = document.getElementById('errorModal');
+                const modal = new mdb.Modal(errorModal);
+                const errorModalContent = document.getElementById('errorModalContent');
+                if (activitat_fira_id_activitat.includes(elem.dataset.activitat_fira_id_activitat)) {
+                    errorModalContent.innerHTML = 'No pots apuntar-te en la <b>mateixa</b> activitat.';
+                }
+                if (activitat_fira_id_activitat.length > 3) {
+                    errorModalContent.innerHTML = 'No pots apuntar-te en <b>mes</b> de 4 activitats.';
+                }
+                modal.show()
                 elem.checked = false;
             }
             activitats_obligatoria.className = 'divcheckboxSelect';
