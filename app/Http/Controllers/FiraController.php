@@ -30,7 +30,7 @@ class FiraController extends Controller
         }
 
         $isReservar = true;
-        $noPlaces = [];
+        $noPlaces[] = ['Activitats sense places:'];
         $activitats_reservas = [];
 
         foreach ($request->activitat_fira_id as $key => $activitat_fira_id) {

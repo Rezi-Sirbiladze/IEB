@@ -167,9 +167,9 @@
                         const errorModal = document.getElementById('errorModal');
                         const modal = new mdb.Modal(errorModal);
                         const errorModalContent = document.getElementById('errorModalContent');
-                        let mensaje = 'Activitats sense places:';
+                        let mensaje = '';
                         response.forEach(element => {
-                            mensaje = mensaje + '<br>' + element;
+                            mensaje = mensaje + element + '<br>';
                         });
                         errorModalContent.innerHTML = mensaje;
                         modal.show()

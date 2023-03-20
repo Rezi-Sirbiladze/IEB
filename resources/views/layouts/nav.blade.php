@@ -83,11 +83,11 @@
                                     <li>
                                         <a class="dropdown-item"
                                             {{ Route::currentRouteNamed('/home') ? 'style=color:#3b71ca;' : '' }}
-                                            href="{{ url('/home') }}">Home
+                                            href="{{ url('/home') }}">Tauler
                                         </a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            {{ __('Sortida') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -99,7 +99,7 @@
                                     <li>
                                         <a class="dropdown-item"
                                             {{ Route::currentRouteNamed('login') ? 'style=color:#3b71ca;' : '' }}
-                                            href="{{ route('login') }}">Login</a>
+                                            href="{{ route('login') }}">Entrada</a>
                                     </li>
                                 @endauth
                             @endif
