@@ -45,12 +45,27 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{ $reserva->activitat_fira->activitat->nom }}</h5>
                                             <p class="card-text">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad inventore nulla
-                                                error iusto amet veniam, pariatur ratione magni, fugiat molestiae, at
-                                                assumenda ea dolor. Ex similique a tempora! Quae, quos!
+                                                @if ($reserva->valoracio)
+                                                    <div class="form-outline">
+                                                        <input type="number" id="valoracio" name="valoracio"
+                                                            class="form-control" min="1" max="5"
+                                                            @if ($reserva->valoracio) value="{{ $reserva->valoracio }}" @endif
+                                                            readonly />
+                                                        <label class="form-label" for="valoracio">Valoració</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form-outline">
+                                                        <textarea class="form-control" id="comentari" name="comentari" rows="2" maxlength="200"
+                                                            @if ($reserva->comentari) value="{{ $reserva->comentari }}" @endif readonly>{{ $reserva->comentari }}</textarea>
+                                                        <label class="form-label" for="comentari">Comentari</label>
+                                                    </div>
+                                                @else
+                                                    Sense valoració
+                                                @endif
                                             </p>
 
                                             <button type="button" name="btn_valorar_reserva"
+                                                data-id_reserva="{{ $reserva->id }}"
                                                 class="btn btn-primary">Valorar</button>
                                         </div>
                                     </div>
@@ -81,11 +96,9 @@
             el.addEventListener('click', function() {
                 var parametros = {
                     "_token": "{{ csrf_token() }}",
-                    "alumno_id": 'document.getElementById("alumno_id").value',
-                    "practicasSelecciondas": 'practicasSelecciondas',
-                    "id_licencia": 'id_licencia',
+                    "id_reserva": el.dataset.id_reserva,
                 };
-                $.ajax({
+                var xhr = $.ajax({
                     data: parametros,
                     url: '{{ url(route('modal_valorar')) }}',
                     type: 'POST',
@@ -96,7 +109,9 @@
                         );
                     },
                     success: function(response) {
-                        $('#response_content').html(response);
+                        setTimeout(function() {
+                            $('#response_content').html(response);
+                        }, 1100);
                     }
                 });
             })

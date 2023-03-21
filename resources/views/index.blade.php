@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', '')
+@section('title', 'Fira')
 @section('content')
 
     @if ($errors->any())

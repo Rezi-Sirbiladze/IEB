@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Reserva;
 use Illuminate\Support\Facades\Auth;
+
+use App\Models\Reserva;
 
 class HomeController extends Controller
 {

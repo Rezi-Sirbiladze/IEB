@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Activitat_fira;
-use App\Models\Reserva;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+
+use App\Models\Activitat_fira;
+use App\Models\Reserva;
+
 
 class FiraController extends Controller
 {
@@ -65,7 +68,14 @@ class FiraController extends Controller
 
     public function modal_valorar(Request $request)
     {
+        $reserva = Reserva::find($request->id_reserva);
+        return view('modals.valorar', compact('reserva'));
+    }
 
-        return view('modals.valorar', compact('request'));
+    public function update_valorar(Request $request)
+    {
+
+        Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio, 'comentari' => $request->comentari]);
+        return Redirect::back()->withErrors(['msg' => 'Activitat valorat']);
     }
 }
