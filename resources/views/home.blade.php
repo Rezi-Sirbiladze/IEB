@@ -50,7 +50,8 @@
                                                 assumenda ea dolor. Ex similique a tempora! Quae, quos!
                                             </p>
 
-                                            <button type="button" class="btn btn-primary">Valorar</button>
+                                            <button type="button" name="btn_valorar_reserva"
+                                                class="btn btn-primary">Valorar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -61,4 +62,45 @@
             </div>
         </div>
     </div>
+
+    <!-- Remote source -->
+    <div class="modal fade" id="modal_info_valorar" tabindex="-1" aria-labelledby="modal_info_valorar" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-content" id="response_content">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Modal de valorar
+        let btn_valorar_reserva = document.getElementsByName("btn_valorar_reserva");
+        Array.from(btn_valorar_reserva).forEach(el =>
+            el.addEventListener('click', function() {
+                var parametros = {
+                    "_token": "{{ csrf_token() }}",
+                    "alumno_id": 'document.getElementById("alumno_id").value',
+                    "practicasSelecciondas": 'practicasSelecciondas',
+                    "id_licencia": 'id_licencia',
+                };
+                $.ajax({
+                    data: parametros,
+                    url: '{{ url(route('modal_valorar')) }}',
+                    type: 'POST',
+                    beforeSend: function() {
+                        $("#modal_info_valorar").modal('show');
+                        $('#response_content').html(
+                            '<div class="p-5 h3 text-center text-dark"> <div class="loading"><span></span><span></span><span></span><span></span><span></span></div></div>'
+                        );
+                    },
+                    success: function(response) {
+                        $('#response_content').html(response);
+                    }
+                });
+            })
+        );
+        //* Modal de valorar
+    </script>
 @endsection

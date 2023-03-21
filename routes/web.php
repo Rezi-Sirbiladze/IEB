@@ -13,6 +13,7 @@
 
 Route::get('/', 'FiraController@index')->name('/');
 Route::post('reservar', 'FiraController@reservar')->name('reservar');
+Route::post('modal_valorar', 'FiraController@modal_valorar')->name('modal_valorar');
 
 Route::get('login', 'HomeController@index')->name('home');
 

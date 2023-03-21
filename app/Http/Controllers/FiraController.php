@@ -62,4 +62,10 @@ class FiraController extends Controller
 
         return $noPlaces;
     }
+
+    public function modal_valorar(Request $request)
+    {
+
+        return view('modals.valorar', compact('request'));
+    }
 }
