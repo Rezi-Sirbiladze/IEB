@@ -124,6 +124,31 @@
         </div>
     </div>
 
+    <div class="row mt-4">
+            @foreach ($activitats as $activitat)
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="{{ asset('img/' . $activitat->imatge . '') }}" class="img-fluid" style="height: 300px; @if($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $activitat->nom }}</h5>
+                            <p class="card-text">
+                                {{ $activitat->descripcio }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+    </div>
+
+
+
     <!-- Modal -->
     <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
         <div class="modal-dialog">

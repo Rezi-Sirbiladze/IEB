@@ -38,13 +38,15 @@
 
 <body>
     @include('layouts.nav')
-    <section class="splide" aria-label="Splide Basic HTML Example">
+    <section class="splide" aria-label="Slider">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide"><img src="https://placedog.net/1000/800" alt=""></li>
-                <li class="splide__slide"><img src="https://placedog.net/1000/700" alt=""></li>
-                <li class="splide__slide"><img src="https://placedog.net/1000/600" alt=""></li>
-                <li class="splide__slide"><img src="https://placedog.net/1000/500" alt=""></li>
+                <li class="splide__slide"><img src="{{ asset('img/logo-piel-de-mariposa.png') }}" style="object-fit: scale-down"></li>
+                <li class="splide__slide"><img src="{{ asset('img/foto 1.jpg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('img/foto 3.jpg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('img/foto 4.jpg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('img/foto 8.jpg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('img/Design - Option C.png') }}" style="object-fit: contain"></li>
             </ul>
         </div>
     </section>

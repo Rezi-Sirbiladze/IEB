@@ -18,16 +18,19 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        Activitat::insert(array('nom' => 'Actividad conjuta', 'descripcio' => 'Actividad conjuta', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'FAMA', 'descripcio' => 'FAMA', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'WOD', 'descripcio' => 'WOD', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'BOXEO', 'descripcio' => 'BOXEO', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'CORE y TRX', 'descripcio' => 'CORE y TRX', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'Oposiciones', 'descripcio' => 'Oposiciones', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'Postural', 'descripcio' => 'Postural', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'Twerk', 'descripcio' => 'Twerk', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'By combat', 'descripcio' => 'By combat', 'created_at' => Carbon::now(),));
-        Activitat::insert(array('nom' => 'Taller nutrició', 'descripcio' => 'Taller nutrició', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'Actividad conjuta', 'descripcio' => 'Actividad conjuta', 'imatge' => 'Design - Option C.png', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'FAMA', 'descripcio' => "Classe pre coreografiada de condicionament físic, inspirada en la cultura llatina amb sons també internacionals. La fórmula barreja el ball amb exercicis de tonificació per a totes les persones sense importar la seva edat, el seu estat físic, el seu entorn, ja que no requereix un nivell ni d'una experiència prèvia.", 'imatge' => 'foto 1.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'WOD', 'descripcio' => "Propi de la disciplina del CrossFit. Les seves sigles signifiquen \"Work Of the Day\", que significa la rutina i els exercicis que s'han de realitzar aquell dia en concret. Aquesta rutina està composta d'exercicis físics que combinen la força, gimnàstica i resistència.", 'imatge' => 'foto 2.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'BOXEO', 'descripcio' => "Vols descobrir les bases de la boxa? Apunta't a la nostra classe i coneixeràs els cops més bàsics i més utilitzats de la boxa, així com practicaràs les combinacions més eficients. T'assegurem diversió mentres guanyes confiança i aprens a defensar-te davant d'un atac.", 'imatge' => 'foto 3.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'CORE y TRX', 'descripcio' => "Treball intens d'abdominals amb diferents tipus de planxes i crunches abdominals, combinat amb un treball funcional mitjançant exercicis on usarem el nostre propi pes corporal en suspensió (TRX).", 'imatge' => 'foto 4.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'Oposicions', 'descripcio' => "Consisteix en conèixer les proves de les oposicions de les forces de seguretat de l'estat, per a posar-te a prova i veure a quin nivell et trobes. T'animes?", 'imatge' => 'foto 5.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'Postural', 'descripcio' => "Activitat on el cos i ments treballen de forma integral per a la millora la condició física, el control postural, la flexibilitat i la respiració. La combinació d'exercicis d'estiraments i tonificació de les diferents cadenes musculars seran bàsics per garantir la correcta estabilització de la columna. Integrar la relaxació com a part del nostre concepte de salut i entrenament és un dels pilars del Control Postural.", 'imatge' => 'foto 6.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'Twerk', 'descripcio' => 'Twerk', 'imatge' => '', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'By combat', 'descripcio' => "El que es busca aquest taller és mostrar aquesta innovadora modalitat on un treball aeròbic d'alta intensitat es combina amb els gestos tècnics de diferents arts marcials com el Taekwondo, boxeo, karate , Muay Thai,... En format coreografiat per incloure el ritme i la coordinació, i utilitzant cops de puny, puntades, guàrdies,...", 'imatge' => 'foto 7.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'Nutrició reptes', 'descripcio' => "T'has plantejat mai quin tipus d'alimentació porten els esportistes? Sabries dir quines adaptacions alimentàries ha de tenir un esportista de resistència? I de força-potència?
+        Vine a fer un taller amb l'alumnat de dietètica de l'IAB per aprendre consells nutricionals bàsics I característics per a diferents tipus d'esportistes", 'imatge' => 'foto 8.jpg', 'created_at' => Carbon::now(),));
+        Activitat::insert(array('nom' => 'A cuinar!', 'descripcio' => "Si vols aprendre a fer un menú senzill, ràpid, energetic i saludable, que et serveixi per abans d'anar a fet el teu entrenament, o per després, passa't a fer un taller de cuina amb l'alumnat de dietètica de l'IAB. I al final del taller, a fer el tastet... segur que  t'agradarà.
+        ", 'imatge' => 'foto 9.jpg', 'created_at' => Carbon::now(),));
 
         Institut::insert(array(
             'nom' => "Institut de l'Esport de Barcelona",
@@ -42,6 +45,9 @@ class DatabaseSeeder extends Seeder
             'data' => '2023-04-21',
             'hora_inici' => '9:00',
             'hora_final' => '14:00',
+            'descripcio' => "La FIRA és un esdeveniment organitzat per l'alumnat de 2n del Cicle Superior de Condicionament Físic de l'Institut de l'Esport de Barcelona amb la intenció de promoure la pràctica d'exercici físic en població jove, donar a conèixer el nostre Institut així com fomentar els valors solidaris amb una especial col·laboració amb Tienda Solidaria Piel de Mariposa.
+            Gaudirem d'un matí amb diverses activitats i tallers dirigits pels mateixos alumnes.
+            Fem esport solidari!",
             'created_at' => Carbon::now(),
         ));
 
@@ -117,6 +123,15 @@ class DatabaseSeeder extends Seeder
             'places' => 15,
             'created_at' => Carbon::now(),
         ));
+        Activitat_fira::insert(array(
+            'id_fira' => 1,
+            'id_activitat' => 11,
+            'data' => '2023-04-21',
+            'hora_inici' => '9:30',
+            'hora_final' => '10:15',
+            'places' => 15,
+            'created_at' => Carbon::now(),
+        ));
 
         // Cambio
 
@@ -176,7 +191,7 @@ class DatabaseSeeder extends Seeder
         ));
         Activitat_fira::insert(array(
             'id_fira' => 1,
-            'id_activitat' => 8,
+            'id_activitat' => 9,
             'data' => '2023-04-21',
             'hora_inici' => '10:30',
             'hora_final' => '11:15',
@@ -186,6 +201,15 @@ class DatabaseSeeder extends Seeder
         Activitat_fira::insert(array(
             'id_fira' => 1,
             'id_activitat' => 10,
+            'data' => '2023-04-21',
+            'hora_inici' => '10:30',
+            'hora_final' => '11:15',
+            'places' => 15,
+            'created_at' => Carbon::now(),
+        ));
+        Activitat_fira::insert(array(
+            'id_fira' => 1,
+            'id_activitat' => 11,
             'data' => '2023-04-21',
             'hora_inici' => '10:30',
             'hora_final' => '11:15',
@@ -267,6 +291,15 @@ class DatabaseSeeder extends Seeder
             'places' => 15,
             'created_at' => Carbon::now(),
         ));
+        Activitat_fira::insert(array(
+            'id_fira' => 1,
+            'id_activitat' => 11,
+            'data' => '2023-04-21',
+            'hora_inici' => '11:30',
+            'hora_final' => '12:15',
+            'places' => 15,
+            'created_at' => Carbon::now(),
+        ));
 
         // Cambio
 
@@ -326,7 +359,7 @@ class DatabaseSeeder extends Seeder
         ));
         Activitat_fira::insert(array(
             'id_fira' => 1,
-            'id_activitat' => 8,
+            'id_activitat' => 9,
             'data' => '2023-04-21',
             'hora_inici' => '12:30',
             'hora_final' => '13:15',
@@ -336,6 +369,15 @@ class DatabaseSeeder extends Seeder
         Activitat_fira::insert(array(
             'id_fira' => 1,
             'id_activitat' => 10,
+            'data' => '2023-04-21',
+            'hora_inici' => '12:30',
+            'hora_final' => '13:15',
+            'places' => 15,
+            'created_at' => Carbon::now(),
+        ));
+        Activitat_fira::insert(array(
+            'id_fira' => 1,
+            'id_activitat' => 11,
             'data' => '2023-04-21',
             'hora_inici' => '12:30',
             'hora_final' => '13:15',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activitat;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,8 +16,9 @@ class FiraController extends Controller
 {
     public function index()
     {
+        $activitats = Activitat::all();
         $activitats_fira = Activitat_fira::All();
-        return view('index', compact('activitats_fira'));
+        return view('index', compact('activitats_fira', 'activitats'));
     }
 
     public function reservar(Request $request)

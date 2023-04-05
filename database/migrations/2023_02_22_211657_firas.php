@@ -20,6 +20,7 @@ class Firas extends Migration
             $table->date('data');
             $table->time('hora_inici');
             $table->time('hora_final');
+            $table->text('descripcio');
             $table->softDeletes();
             $table->timestamps();
 
