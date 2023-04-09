@@ -17,15 +17,21 @@
     @endif
 
     <h1>IEB</h1>
+    <div class="card mt-2">
+        <div class="card-body">
+            <h5 class="card-title">FIRA</h5>
+            <p class="card-text">{{ $fira->descripcio }}</p>
+        </div>
+    </div>
+
 
     <section id="hiddenPanel" class="txt-highlight-color bg-color bg-pattern">
-        <div id="hiddenPanel_contenido"></div>
+        <span id="close-bar" class="myButton"><i class="fas fa-calendar-check"></i></span>
         <button class="btn btn-primary" id="btn_reservar">Reservar</button>
-        <span id="close-bar" class="myButton">
-            < </span>
+        <div id="hiddenPanel_contenido"></div>
     </section>
 
-    <div class="card mt-2">
+    <div class="card mt-4">
         <div class="card-body">
             <h5 class="card-title">9:00 a 9:30</h5>
             <p class="card-text">Check in / Benvinguda</p>
@@ -37,7 +43,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">9:30 a 10:15</h5>
+                    <h5 class="card-title"><b>9:30 a 10:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '09:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -56,7 +62,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">10:30 a 11:15</h5>
+                    <h5 class="card-title"><b>10:30 a 11:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '10:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -75,7 +81,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">11:30 a 12:15</h5>
+                    <h5 class="card-title"><b>11:30 a 12:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '11:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -94,7 +100,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">12:30 a 13:15</h5>
+                    <h5 class="card-title"><b>12:30 a 13:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '12:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -125,26 +131,26 @@
     </div>
 
     <div class="row mt-4">
-            @foreach ($activitats as $activitat)
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="{{ asset('img/' . $activitat->imatge . '') }}" class="img-fluid" style="height: 300px; @if($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"/>
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $activitat->nom }}</h5>
-                            <p class="card-text">
-                                {{ $activitat->descripcio }}
-                            </p>
-                        </div>
+        @foreach ($activitats as $activitat)
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="{{ asset('img/' . $activitat->imatge . '') }}" class="img-fluid"
+                            style="height: 300px; @if ($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{ $activitat->nom }}</b></h5>
+                        <p class="card-text">
+                            {{ $activitat->descripcio }}
+                        </p>
                     </div>
                 </div>
-            @endforeach
-
+            </div>
+        @endforeach
     </div>
 
 

@@ -35,7 +35,7 @@ activitats.forEach(function (elem) {
                 elem.checked = false;
             }
             activitats_obligatoria.className = 'divcheckboxSelect';
-            hiddenPanel_contenido.innerHTML = activitat_fira_activitat_nom;
+            addActivitats(activitat_fira_activitat_nom);
         } else {
             let index = activitat_fira_id.indexOf(elem.dataset.activitat_fira_id);
             if (index !== -1) {
@@ -49,11 +49,21 @@ activitats.forEach(function (elem) {
             if (activitat_fira_id_activitat.length < 1) {
                 activitats_obligatoria.className = 'divcheckboxNoSelect';
             }
-            hiddenPanel_contenido.innerHTML = activitat_fira_activitat_nom;
+            addActivitats(activitat_fira_activitat_nom);
         }
     });
 });
 //* Actividades seleccionadas en el calendario cambiar estilo y añadir en array
+
+// Panel content
+    function addActivitats(activitats) {
+        var content = '';
+        activitats.forEach(element => {
+            content = content + '<p>' + element + '</p>'
+        });
+        hiddenPanel_contenido.innerHTML = content;
+    }
+//* Panel content
 
 // Panel
 var speed = 300;
@@ -72,3 +82,4 @@ $('#close-bar').on('click', function () {
 
 });
 //* Panel
+

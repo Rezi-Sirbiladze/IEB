@@ -1,7 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
 * {
-  font-family: Nunito, sans-serif;
+  font-family: 'Calligraffitti', cursive;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://wallpaperaccess.com/full/1313811.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.667);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 /* Scroll bar */
@@ -60,12 +82,7 @@
   justify-content: center;
 }
 
-.social-btn svg {
-  height: 24px;
-  width: 24px;
-}
-
-.social-btn span {
+.social-btn a span {
   width: 0px;
   overflow: hidden;
   transition: 0.3s;
@@ -78,21 +95,9 @@
   border-radius: 5px;
 }
 
-.social-btn:hover span {
+.social-btn:hover a span {
   padding: 2px;
   width: 80px;
-}
-
-#twitter svg {
-  fill: #1da1f2;
-}
-
-#linkedin svg {
-  fill: #0e76a8;
-}
-
-#github {
-  fill: #333;
 }
 
 /** RRSS */
@@ -147,31 +152,55 @@
   top: 100px;
   right: -200px;
   width: 200px;
-  background-color: grey;
   height: 250px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #close-bar {
   z-index: 1;
   position: absolute;
-  left: -65px;
-  background-color: white;
-  border-radius: 10em;
-  padding: 1em 2em;
+  left: -76px;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid black;
+  line-height: 1.25;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  transition: all 250ms;
+  vertical-align: baseline;
+  border-radius: 16px;
+}
+
+#close-bar:hover,
+#close-bar:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 #close-bar:hover {
-  transform: translateY(-4px) translateX(-2px);
-  box-shadow: 2px 5px 0 0 black;
+  transform: translateY(-1px);
 }
 
-
 #close-bar:active {
-  transform: translateY(2px) translateX(1px);
-  box-shadow: 0 0 0 0 black;
+  background-color: #bddfff;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+#btn_reservar {
+  margin-bottom: 20px;
 }
 
 /** Panel */

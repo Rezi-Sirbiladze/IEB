@@ -56,7 +56,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" {{ Route::currentRouteNamed('Ieb/vehiculos') ? 'style=color:#3b71ca;' : '' }}
                         href="">Contacte
                     </a>
@@ -66,14 +66,14 @@
                     <a class="nav-link" {{ Route::currentRouteNamed('Ieb/profesores') ? 'style=color:#3b71ca;' : '' }}
                         href="">Informació
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item mx-4">
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
                             aria-expanded="false">
-                            <img @if (Auth::check()) src="https://placedog.net/120/120" @else src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg" @endif
+                            <img @if (Auth::check()) src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" @else src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" @endif
                                 class="rounded-circle" height="40" width="40"
                                 alt="Black and White Portrait of a Man" loading="lazy" />
                         </a>

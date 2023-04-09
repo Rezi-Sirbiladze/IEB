@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Models\Activitat_fira;
+use App\Models\Fira;
 use App\Models\Reserva;
 
 
@@ -16,9 +17,10 @@ class FiraController extends Controller
 {
     public function index()
     {
+        $fira = Fira::first();
         $activitats = Activitat::all();
         $activitats_fira = Activitat_fira::All();
-        return view('index', compact('activitats_fira', 'activitats'));
+        return view('index', compact('activitats_fira', 'activitats', 'fira'));
     }
 
     public function reservar(Request $request)
