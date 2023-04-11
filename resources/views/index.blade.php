@@ -43,7 +43,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><b>9:30 a 10:15</b></h5>
+                    <h5 class="card-title"><b>1 | 9:30 a 10:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '09:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -62,7 +62,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><b>10:30 a 11:15</b></h5>
+                    <h5 class="card-title"><b>2 | 10:30 a 11:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '10:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -81,7 +81,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><b>11:30 a 12:15</b></h5>
+                    <h5 class="card-title"><b>3 | 11:30 a 12:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '11:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -100,7 +100,7 @@
         <div class="col-sm-3 mt-2">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><b>12:30 a 13:15</b></h5>
+                    <h5 class="card-title"><b>4 | 12:30 a 13:15</b></h5>
                     @foreach ($activitats_fira->where('hora_inici', '12:30:00') as $activitat_fira)
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
@@ -126,6 +126,20 @@
                 <label id="activitats_obligatoria" class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                     <p>{{ $activitat_fira->activitat->nom }}</p>
                 </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="{{ asset('img/mapa.png') }}" class="img-fluid" style="height: 600px; object-fit: scale-down;" />
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -56,13 +56,13 @@ activitats.forEach(function (elem) {
 //* Actividades seleccionadas en el calendario cambiar estilo y añadir en array
 
 // Panel content
-    function addActivitats(activitats) {
-        var content = '';
-        activitats.forEach(element => {
-            content = content + '<p>' + element + '</p>'
-        });
-        hiddenPanel_contenido.innerHTML = content;
-    }
+function addActivitats(activitats) {
+    var content = '';
+    activitats.forEach(element => {
+        content = content + '<p>' + element + '</p>'
+    });
+    hiddenPanel_contenido.innerHTML = content;
+}
 //* Panel content
 
 // Panel
@@ -83,3 +83,7 @@ $('#close-bar').on('click', function () {
 });
 //* Panel
 
+document.querySelector('.third-button').addEventListener('click', function () {
+
+    document.querySelector('.animated-icon3').classList.toggle('open');
+});

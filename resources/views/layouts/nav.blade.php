@@ -44,13 +44,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerIeb"
-            aria-controls="navbarTogglerIeb" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
+        <button class="navbar-toggler ms-auto third-button" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarTogglerIeb" aria-controls="navbarTogglerIeb" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="animated-icon3"><span></span><span></span><span></span></div>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerIeb">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item d-flex justify-content-center">
                     <a class="nav-link" {{ Route::currentRouteNamed('/') ? 'style=color:#3b71ca;' : '' }}
                         href="{{ route('/') }}">Fira
                     </a>
@@ -68,7 +69,7 @@
                     </a>
                 </li> --}}
 
-                <li class="nav-item mx-4">
+                <li class="nav-item mx-4 d-flex justify-content-center">
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"

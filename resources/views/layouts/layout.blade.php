@@ -46,7 +46,7 @@
                 <li class="splide__slide"><img src="{{ asset('img/foto 1.jpg') }}"></li>
                 <li class="splide__slide"><img src="{{ asset('img/foto 3.jpg') }}"></li>
                 <li class="splide__slide"><img src="{{ asset('img/foto 4.jpg') }}"></li>
-                <li class="splide__slide"><img src="{{ asset('img/foto 8.jpg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('img/foto 9.jpg') }}"></li>
                 <li class="splide__slide"><img src="{{ asset('img/Design - Option C.png') }}"
                         style="object-fit: contain"></li>
             </ul>

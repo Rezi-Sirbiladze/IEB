@@ -39,8 +39,9 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                            <img src="{{ asset('img/' . $reserva->activitat_fira->activitat->imatge . '') }}" class="img-fluid"
-                                            style="height: 300px; @if ($reserva->activitat_fira->activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif" />
+                                            <img src="{{ asset('img/' . $reserva->activitat_fira->activitat->imatge . '') }}"
+                                                class="img-fluid"
+                                                style="height: 300px; @if ($reserva->activitat_fira->activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif" />
                                             <a href="#!">
                                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
                                                 </div>
