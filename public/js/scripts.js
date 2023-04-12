@@ -83,7 +83,8 @@ $('#close-bar').on('click', function () {
 });
 //* Panel
 
+// Menu icon
 document.querySelector('.third-button').addEventListener('click', function () {
-
     document.querySelector('.animated-icon3').classList.toggle('open');
 });
+//* Menu icon
