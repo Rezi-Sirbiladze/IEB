@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RolsUsuaris extends Migration
+class RolUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class RolsUsuaris extends Migration
      */
     public function up()
     {
-        Schema::create('rols_usuaris', function (Blueprint $table) {
+        Schema::create('rol_user', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->integer('id_usuari')->unsigned();
-            $table->integer('id_rol')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('rol_id')->unsigned();
             $table->softDeletes();
             $table->timestamps();
 
             // Relationships
-            $table->foreign('id_usuari')->references('id')->on('users');
-            $table->foreign('id_rol')->references('id')->on('rols');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('rol_id')->references('id')->on('rols');
         });
     }
 
@@ -33,6 +33,6 @@ class RolsUsuaris extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rols_usuaris');
+        Schema::dropIfExists('rol_user');
     }
 }

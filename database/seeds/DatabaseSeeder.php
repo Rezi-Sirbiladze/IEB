@@ -4,8 +4,11 @@ use App\Models\Activitat;
 use App\Models\Activitat_fira;
 use App\Models\Institut;
 use App\Models\Fira;
+use App\Models\Rol;
+use App\User;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +20,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        
+        Rol::insert(array('nom' => 'admin', 'descripcio' => 'admin', 'created_at' => Carbon::now()));
+
+        $admin = User::create(array('name' => 'Admin', 'email' => 'admin@admin.net', 'password' => Hash::make('admin@admin'), 'created_at' => Carbon::now(),));
+        $adminRol = Rol::where('id', 1)->first();
+        $admin->rol()->attach($adminRol);
 
         Activitat::insert(array('nom' => 'Actividad conjuta', 'descripcio' => 'Actividad conjuta', 'imatge' => 'Design - Option C.png', 'created_at' => Carbon::now(),));
         Activitat::insert(array('nom' => 'FAMA', 'descripcio' => "Classe pre coreografiada de condicionament físic, inspirada en la cultura llatina amb sons també internacionals. La fórmula barreja el ball amb exercicis de tonificació per a totes les persones sense importar la seva edat, el seu estat físic, el seu entorn, ja que no requereix un nivell ni d'una experiència prèvia.", 'imatge' => 'foto 1.jpg', 'created_at' => Carbon::now(),));

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Rol_user;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,6 +41,11 @@ class User extends Authenticatable
     public function rol()
     {
         return $this->belongsToMany('App\Models\Rol');
+    }
+
+    public function isAdmin()
+    {
+        return Rol_user::where('user_id', $this->id)->where('rol_id', 1)->first();
     }
 
     public function reseva()
