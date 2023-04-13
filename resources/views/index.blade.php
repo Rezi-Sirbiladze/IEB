@@ -48,6 +48,7 @@
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
+                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}</p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id_activitat="{{ $activitat_fira->id_activitat }}"
@@ -67,6 +68,7 @@
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
+                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}</p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id_activitat="{{ $activitat_fira->id_activitat }}"
@@ -86,6 +88,7 @@
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
+                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}</p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id_activitat="{{ $activitat_fira->id_activitat }}"
@@ -105,6 +108,7 @@
                         <div class="divcheckbox">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
+                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}</p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id_activitat="{{ $activitat_fira->id_activitat }}"
@@ -133,8 +137,12 @@
     <div class="row mt-4">
         <div class="col-md-12 mb-4">
             <div class="card">
+                <div class="m-4">
+                    <h5>Ens veiem en Complex Esportiu La Bàscula</h5>
+                    <p>Carrer del Foc, 132, 08004 Barcelona</p>
+                </div>
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="{{ asset('img/mapa.png') }}" class="img-fluid" style="height: 600px; object-fit: scale-down;" />
+                    <img src="{{ asset('img/mapa.png') }}" class="img-fluid" style="height: 600px;" />
                     <a href="#!">
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
                         </div>
