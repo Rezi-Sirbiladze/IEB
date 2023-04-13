@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{ asset('images/favicon.png') }}" alt="Backend" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://agora.xtec.cat/ins-esport/wp-content/uploads/usu2109/2023/01/Logo-IEB-300x129.png" alt="Backend" rel="shortcut icon" type="image/x-icon" />
 
 
     <!-- Font Awesome -->

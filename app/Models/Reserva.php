@@ -11,7 +11,7 @@ class Reserva extends Model
 
     public function usuari()
     {
-        return $this->belongsTo('App\User', 'id', 'id_usuari');
+        return $this->belongsTo('App\User', 'id_usuari', 'id');
     }
 
     public function activitat_fira()

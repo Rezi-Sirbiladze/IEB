@@ -215,7 +215,6 @@
                 url: '{{ url(route('reservar')) }}',
                 type: 'POST',
                 success: function(response) {
-                    console.log(response);
                     if (typeof response == 'object') {
                         const errorModal = document.getElementById('errorModal');
                         const modal = new mdb.Modal(errorModal);

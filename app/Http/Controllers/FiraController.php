@@ -80,4 +80,15 @@ class FiraController extends Controller
     {
         Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio+1, 'comentari' => $request->comentari]);
     }
+
+    public function informes(Request $request)
+    {
+        $activitat_fira = Activitat_fira::find($request->id);
+        return view('informes_result', compact('activitat_fira'));
+    }
+    public function all_informes(Request $request)
+    {
+        $activitat_fira = Activitat_fira::all();
+        return view('informes_all_result', compact('activitat_fira'));
+    }
 }

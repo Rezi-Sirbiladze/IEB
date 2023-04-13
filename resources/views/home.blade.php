@@ -25,6 +25,8 @@
                     <div class="card-header">Dashboard</div>
                     @if(Auth::user()->isAdmin('admin'))
                     <p>Yay! I'm Admin! 😎</p>
+                    
+                    @include('partials.informes')
                     @endif
                     <div class="card-body">
                         @if (session('status'))
@@ -33,7 +35,7 @@
                             </div>
                         @endif
                         <div class="row">
-                            @if (count($reservas) < 1)
+                            @if (count($reservas) < 1 && !Auth::user()->isAdmin('admin'))
                                 <p>Sense reserves</p>
                                 <a href="{{ route('/') }}" class="btn btn-primary">APUNTA'T</a>
                             @endif

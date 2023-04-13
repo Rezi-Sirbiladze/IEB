@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\Activitat;
+use App\Models\Activitat_fira;
+use App\Models\Fira;
 use App\Models\Reserva;
 
 class HomeController extends Controller
@@ -32,6 +35,10 @@ class HomeController extends Controller
             ->select('reservas.*')
             ->get();
 
-        return view('home', compact('reservas'));
+        $fira = Fira::first();
+        $activitats = Activitat::all();
+        $activitats_fira = Activitat_fira::All();
+
+        return view('home', compact('reservas', 'fira', 'activitats', 'activitats_fira'));
     }
 }
