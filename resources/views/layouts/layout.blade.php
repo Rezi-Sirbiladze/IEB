@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://agora.xtec.cat/ins-esport/wp-content/uploads/usu2109/2023/01/Logo-IEB-300x129.png" alt="Backend" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://agora.xtec.cat/ins-esport/wp-content/uploads/usu2109/2023/01/Logo-IEB-300x129.png" alt="Backend"
+        rel="shortcut icon" type="image/x-icon" />
 
 
     <!-- Font Awesome -->
@@ -14,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    {{-- aos --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 
@@ -107,7 +110,8 @@
     {{-- Slider --}}
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
-
+    {{-- aos --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
@@ -132,6 +136,8 @@
             });
             splide.mount();
         });
+
+        AOS.init();
     </script>
 </body>
 

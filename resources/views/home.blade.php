@@ -23,10 +23,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Dashboard</div>
-                    @if(Auth::user()->isAdmin('admin'))
-                    <p>Yay! I'm Admin! 😎</p>
-                    
-                    @include('partials.informes')
+                    @if (Auth::user()->isAdmin('admin'))
+                        <p>Yay! I'm Admin! 😎</p>
+
+                        @include('partials.informes')
                     @endif
                     <div class="card-body">
                         @if (session('status'))
@@ -45,7 +45,8 @@
                                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                             <img src="{{ asset('img/' . $reserva->activitat_fira->activitat->imatge . '') }}"
                                                 class="img-fluid"
-                                                style="height: 300px; @if ($reserva->activitat_fira->activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif" />
+                                                style="height: 300px; @if ($reserva->activitat_fira->activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"
+                                                data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
                                             <a href="#!">
                                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
                                                 </div>

@@ -16,6 +16,7 @@
                 <i class="fa-solid fa-star"></i>
             </div>
         </div>
+        <br>
         <div class="rating-box">
             <header>Comentari</header>
             <textarea id="valoracio_comentari" name="valoracio_comentari" rows="4" maxlength="200"
