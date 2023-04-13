@@ -78,8 +78,6 @@ class FiraController extends Controller
 
     public function update_valorar(Request $request)
     {
-
-        Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio, 'comentari' => $request->comentari]);
-        return Redirect::back()->withErrors(['msg' => 'Activitat valorat']);
+        Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio+1, 'comentari' => $request->comentari]);
     }
 }

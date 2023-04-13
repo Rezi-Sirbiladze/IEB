@@ -52,12 +52,10 @@
                                             <h5 class="card-title">{{ $reserva->activitat_fira->activitat->nom }}</h5>
                                             <p class="card-text">
                                                 @if ($reserva->valoracio)
-                                                    <div class="form-outline">
-                                                        <input type="number" id="valoracio" name="valoracio"
-                                                            class="form-control" min="1" max="5"
-                                                            @if ($reserva->valoracio) value="{{ $reserva->valoracio }}" @endif
-                                                            readonly />
-                                                        <label class="form-label" for="valoracio">Valoració</label>
+                                                    <div class="stars_home">
+                                                        @for ($i = 0; $i < $reserva->valoracio; $i++)
+                                                            <i class="fa-solid fa-star active"></i>
+                                                        @endfor
                                                     </div>
                                                     <hr>
                                                     <div class="form-outline">
