@@ -29,8 +29,14 @@
         <span id="close-bar" class="myButton"><i class="fas fa-calendar-check"></i></span>
         <button class="btn btn-primary" id="btn_reservar">Reservar</button>
         <div id="hiddenPanel_contenido"></div>
-        <b>Actividad conjuta</b>
+        <b>Activitat conjunta</b>
     </section>
+
+    <div class="card mt-4">
+        <div class="card-body" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <h2 class="card-title"><i class="fas fa-calendar-day text-primary"></i> 21/04/2023</h2>
+        </div>
+    </div>
 
     <div class="card mt-4">
         <div class="card-body" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
@@ -48,8 +54,9 @@
                     @foreach ($activitats_fira->where('hora_inici', '09:30:00') as $activitat_fira)
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
-                                <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}
+                                <p class="card-text">{{ $activitat_fira->activitat->nom }} </p>
+                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                    title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
@@ -70,7 +77,8 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}
+                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                    title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
@@ -91,7 +99,8 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}
+                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                    title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
@@ -112,7 +121,8 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text">{{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}
+                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                    title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
                                     data-activitat_fira_id="{{ $activitat_fira->id }}"
@@ -141,7 +151,7 @@
 
     <div class="row mt-4">
         <div class="col-md-12 mb-4">
-            <div class="card" >
+            <div class="card">
                 <div class="m-4">
                     <h5>Ens veiem en Complex Esportiu La Bàscula</h5>
                     <p>Carrer del Foc, 132, 08004 Barcelona</p>
@@ -163,8 +173,8 @@
                 <div class="card">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/' . $activitat->imatge . '') }}" class="img-fluid"
-                            style="height: 300px; @if ($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"  data-aos="fade-up"
-                            data-aos-anchor-placement="bottom-bottom"/>
+                            style="height: 300px; @if ($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"
+                            data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
                             </div>
@@ -255,7 +265,7 @@
                 const modal = new mdb.Modal(errorModal);
                 const errorModalContent = document.getElementById('errorModalContent');
                 errorModalContent.innerHTML =
-                    'És obligatori apuntar-se en 4 activitats + Actividad conjuta obligatori.';
+                    'És obligatori apuntar-se en 4 activitats + Activitat conjunta obligatori.';
                 modal.show()
                 return null;
             }

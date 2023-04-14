@@ -8,8 +8,8 @@
 .parallax {
   /* The image used */
   /* background-image: url("https://wallpaperaccess.com/full/1313811.jpg"); */
-  background: rgb(255,112,112);
-  background: radial-gradient(circle, rgba(255,112,112,1) 0%, rgba(233,186,148,1) 100%);
+  background: rgb(255, 112, 112);
+  background: radial-gradient(circle, rgba(255, 112, 112, 1) 0%, rgba(233, 186, 148, 1) 100%);
 
   /* Set a specific height */
   min-height: 500px;
@@ -137,8 +137,8 @@
 }
 
 .divcheckboxSelect {
-  background: rgb(45,253,128);
-  background: linear-gradient(57deg, rgba(45,253,128,0.5019257703081232) 0%, rgba(34,129,195,0.499124649859944) 100%);
+  background: rgb(45, 253, 128);
+  background: linear-gradient(57deg, rgba(45, 253, 128, 0.5019257703081232) 0%, rgba(34, 129, 195, 0.499124649859944) 100%);
 }
 
 
@@ -517,6 +517,7 @@
   border-radius: 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
+
 .rating-box header {
   font-size: 22px;
   color: #dadada;
@@ -524,17 +525,20 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
 .rating-box .stars {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .stars i {
   color: #e6e6e6;
   font-size: 35px;
   cursor: pointer;
   transition: color 0.2s ease;
 }
+
 .stars i.active {
   color: #ff9c1a;
 }
@@ -557,4 +561,10 @@ textarea {
   font-size: 16px;
   resize: none;
 }
+
 /** Star icons */
+
+.icon_button {
+  background-color: transparent;
+  border-color: #ccc;
+}
