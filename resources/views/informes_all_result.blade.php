@@ -30,7 +30,7 @@
                 <tr>
                     <th>Hora</th>
                     <th>Activitat</th>
-                    <th>nom complet</th>
+                    <th>Nom complet</th>
                     <th>Correu electrònic</th>
                     <th>Valoració</th>
                     <th>Comentari</th>

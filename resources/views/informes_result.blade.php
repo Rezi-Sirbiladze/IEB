@@ -28,7 +28,7 @@
         <table id="tabla_practicas" class="display nowrap" style="width:100%">
             <thead>
                 <tr>
-                    <th>nom complet</th>
+                    <th>Nom complet</th>
                     <th>Correu electrònic</th>
                     <th>Valoració</th>
                     <th>Comentari</th>
