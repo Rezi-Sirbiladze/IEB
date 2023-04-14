@@ -41,7 +41,11 @@
     <div class="card mt-4">
         <div class="card-body" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <h5 class="card-title">9:00 a 9:30</h5>
-            <p class="card-text">Check in / Benvinguda</p>
+            <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <label class="divcheckboxNoSelect" for="">
+                    <p class="card-text">Check in / Benvinguda</p>
+                </label>
+            </div>
         </div>
     </div>
 
@@ -173,7 +177,7 @@
                 <div class="card">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/' . $activitat->imatge . '') }}" class="img-fluid"
-                            style="height: 300px; @if ($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"
+                            style="height: 300px; border-radius: 8px; @if ($activitat->imatge != 'Design - Option C.png') width: -webkit-fill-available; @endif"
                             data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
