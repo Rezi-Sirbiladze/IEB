@@ -29,6 +29,7 @@
         <span id="close-bar" class="myButton"><i class="fas fa-calendar-check"></i></span>
         <button class="btn btn-primary" id="btn_reservar">Reservar</button>
         <div id="hiddenPanel_contenido"></div>
+        <b>Actividad conjuta</b>
     </section>
 
     <div class="card mt-4">
