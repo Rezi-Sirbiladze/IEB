@@ -26,7 +26,7 @@ class EmailRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        if(Str::contains($value, '@ieb.cat') || Str::contains($value, '@institutaliments.barcelona') || Str::contains($value, '1cf.')){
+        if(Str::contains($value, '@ieb.cat') || Str::contains($value, '@institutaliments.barcelona') || Str::contains($value, 'aites@gmail.com')){
             return true;
         }
         return false;

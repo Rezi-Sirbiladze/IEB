@@ -88,4 +88,16 @@
             </div>
         </div>
     </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <?php $activitat_fira = $activitats_fira->where('hora_inici', '13:30:00')->first(); ?>
+            <div class="divcheckbox">
+                <label id="activitats_obligatoria" class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
+                    <p>{{ $activitat_fira->activitat->nom }}</p>
+                    <a href="{{ route('informes', $activitat_fira->id) }}" class="btn btn-primary" target="_blank">Veure</a>
+                </label>
+            </div>
+        </div>
+    </div>
 </div>

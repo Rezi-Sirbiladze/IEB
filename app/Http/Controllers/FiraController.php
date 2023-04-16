@@ -73,12 +73,24 @@ class FiraController extends Controller
     public function modal_valorar(Request $request)
     {
         $reserva = Reserva::find($request->id_reserva);
+
+        if($reserva->activitat_fira->activitat->id == 1){
+            return view('modals.valorar_activitat_conjunta', compact('reserva'));
+        }
+
         return view('modals.valorar', compact('reserva'));
     }
 
     public function update_valorar(Request $request)
     {
-        Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio+1, 'comentari' => $request->comentari]);
+        $reserva = Reserva::find($request->id_reserva);
+
+        if($reserva->activitat_fira->activitat->id == 1){
+            $valoracio = ($request->valoracio0+1) . ":" . ($request->valoracio1+1) . ":" . ($request->valoracio2+1) . ":" . ($request->valoracio3+1) . ":" . ($request->valoracio4+1);
+            Reserva::where('id', $request->id_reserva)->update(['valoracio' => $valoracio, 'comentari' => $request->comentari]);
+        } else {
+            Reserva::where('id', $request->id_reserva)->update(['valoracio' => $request->valoracio+1, 'comentari' => $request->comentari]);
+        }
     }
 
     public function informes(Request $request)

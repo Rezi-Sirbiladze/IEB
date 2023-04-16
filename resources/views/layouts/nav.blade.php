@@ -52,9 +52,14 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerIeb">
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link" {{ Route::currentRouteNamed('/') ? 'style=color:#3b71ca;' : '' }}
-                        href="{{ route('/') }}">Fira
-                    </a>
+                    @if(Route::currentRouteNamed('login'))
+                    <a class="nav-link" href="{{ route('/') }}">Inscripció</a>
+                    @elseif(Route::currentRouteNamed('/'))
+                    <a class="nav-link" href="{{ route('/') }}" style="color:#3b71ca;">Fira</a>
+                    @else
+                    <a class="nav-link" href="{{ route('/') }}">Fira</a>
+                    @endif
+                </a>
                 </li>
 
                 {{-- <li class="nav-item">

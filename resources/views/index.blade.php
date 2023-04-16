@@ -59,7 +59,7 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }} </p>
-                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                <p class="card-text"><button class="right_top icon_button btn btn-primary-outline p-0" data-mdb-toggle="tooltip"
                                     title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
@@ -81,7 +81,7 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                <p class="card-text"><button class="right_top icon_button btn btn-primary-outline p-0" data-mdb-toggle="tooltip"
                                     title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
@@ -103,7 +103,7 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                <p class="card-text"><button class="right_top icon_button btn btn-primary-outline p-0" data-mdb-toggle="tooltip"
                                     title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"
@@ -125,7 +125,7 @@
                         <div class="divcheckbox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                             <label class="divcheckboxNoSelect" for="{{ $activitat_fira->id }}">
                                 <p class="card-text">{{ $activitat_fira->activitat->nom }}</p>
-                                <p class="card-text"><button class="icon_button btn btn-primary-outline px-4 py-2" data-mdb-toggle="tooltip"
+                                <p class="card-text"><button class="right_top icon_button btn btn-primary-outline p-0" data-mdb-toggle="tooltip"
                                     title="Aforament {{ count($activitat_fira->reserva) }} / {{ $activitat_fira->places }}"><i class="fas fa-circle-info fa-lg text-primary"></i></button>
                                 </p>
                                 <input type="checkbox" name="activitats" id="{{ $activitat_fira->id }}"

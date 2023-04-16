@@ -34,11 +34,12 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <div class="row">
+                        <div class="row d-flex justify-content-center">
                             @if (count($reservas) < 1 && !Auth::user()->isAdmin('admin'))
                                 <p>Sense reserves</p>
                                 <a href="{{ route('/') }}" class="btn btn-primary">APUNTA'T</a>
                             @endif
+
                             @foreach ($reservas as $reserva)
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
@@ -57,15 +58,16 @@
                                             <h5 class="card-title">{{ $reserva->activitat_fira->activitat->nom }}</h5>
                                             <p class="card-text">
                                                 @if ($reserva->valoracio)
-                                                    <div class="stars_home">
-                                                        @for ($i = 0; $i < $reserva->valoracio; $i++)
-                                                            <i class="fa-solid fa-star active"></i>
-                                                        @endfor
-                                                    </div>
-                                                    <hr>
+                                                    @if($reserva->activitat_fira->activitat->id != 1)
+                                                        <div class="stars_home">
+                                                            @for ($i = 0; $i < $reserva->valoracio; $i++)
+                                                                <i class="fa-solid fa-star active"></i>
+                                                            @endfor
+                                                        </div>
+                                                        <hr>
+                                                    @endif
                                                     <div class="form-outline">
-                                                        <textarea class="form-control" id="comentari" name="comentari" rows="2" maxlength="200"
-                                                            @if ($reserva->comentari) value="{{ $reserva->comentari }}" @endif readonly>{{ $reserva->comentari }}</textarea>
+                                                        <textarea class="form-control" id="comentari" name="comentari" rows="2" maxlength="200" value="{{$reserva->comentari}}" readonly>{{$reserva->comentari}}</textarea>
                                                         <label class="form-label" for="comentari">Comentari</label>
                                                     </div>
                                                 @else
@@ -86,6 +88,27 @@
             </div>
         </div>
     </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="m-4">
+                    <h5>Ens veiem en Complex Esportiu La Bàscula</h5>
+                    <p>Carrer del Foc, 132, 08004 Barcelona</p>
+                </div>
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="{{ asset('img/MAPA INFO FIRA.png') }}" class="img-fluid"
+                        style="height: 600px; object-fit: contain;"/>
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Remote source -->
     <div class="modal fade" id="modal_info_valorar" tabindex="-1" aria-labelledby="modal_info_valorar" aria-hidden="true">
